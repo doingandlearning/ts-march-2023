@@ -33,3 +33,8 @@ Optional
 - Consider how you could enforce the 'completed' state to be one of:
   true, false, archived, pending, deleted 
 
+```ts
+
+type completedState = boolean | "archived" | "pending" | "deleted"
+
+```
