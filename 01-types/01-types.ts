@@ -69,8 +69,50 @@
     XLarge = 2800,
   }
 
+  // HTTP Status Code
+  //
+
   const box = ScreenSize.Small;
 
   console.log(box);
   console.log(ScreenSize.Large);
+}
+
+// Custom Types
+
+{
+  type Kingdom = "Bacteria" | "Protozoa" | "Chromista";
+
+  let kingdom: Kingdom;
+  kingdom = "Bacteria";
+
+  function whichType(): Kingdom {
+    return "Protozoa";
+  }
+}
+
+// Array/Tuple
+
+{
+  const names: (string | number | boolean | bigint)[] = [
+    "Neil",
+    "Catherine",
+    "Azlee",
+    123,
+    true,
+    121n,
+  ];
+
+  names.push("Zak");
+  names.push("Vicki");
+
+  const first = names.pop();
+
+  let tupleArray: [number, string, string] = [1, "Glasgow", "Louise"];
+
+  // Why are you not shouting at me??
+  tupleArray.push(10);
+
+  tupleArray[0] = "this is a string";
+  tupleArray[1] = 123;
 }
