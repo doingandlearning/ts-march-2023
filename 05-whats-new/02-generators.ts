@@ -35,7 +35,7 @@ function* rangeGenerator(
 }
 
 function* twoWayGenerator() {
-  const what = yield null; //
+  const what = yield null; // Passing values into generator!
   while (true) {
     yield "Hello " + what;
   }
