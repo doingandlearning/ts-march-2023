@@ -24,6 +24,8 @@ async function getUsers(): Promise<User[] | undefined> {
   }
 }
 
+type GetUserPreview = Awaited<ReturnType<typeof getUsers>>;
+
 async function run() {
   const users = await getUsers();
   if (!users) {
