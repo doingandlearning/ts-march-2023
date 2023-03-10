@@ -7,12 +7,16 @@
     id: number;
   }
 
+  function isPerson(input: Person | User | string): input is Person {
+    return (input as Person).name !== undefined;
+  }
+
   function padLeft(padding: number | string | Person | User, input: string) {
     // Guard statement
     if (typeof padding === "number") {
       return " ".repeat(padding) + input;
-    } else if (typeof padding === "object" && "name" in padding) {
-      return `${(padding as Person).name} is a nice person.`;
+    } else if (isPerson(padding)) {
+      return `${padding.name} is a nice person.`;
     } else if (typeof padding === "object" && (padding as User).id) {
       return `${(padding as User).id} is a nice person.`;
     }
