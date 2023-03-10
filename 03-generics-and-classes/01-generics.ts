@@ -16,7 +16,7 @@ console.log(firstElement<string>(["a", "b", "c"]));
 console.log(firstElement([1, 2, 3]));
 console.log(firstElement([1, "two", 3, true]));
 
-interface Box<InsideType, OutsideType> {
+export interface Box<InsideType, OutsideType> {
   inside: InsideType;
   outside: OutsideType;
 }
@@ -26,7 +26,7 @@ let stringyBox: Box<string, number> = {
   outside: 10,
 };
 
-interface LinkedNode<Value> {
+export interface LinkedNode<Value> {
   next?: LinkedNode<Value>;
   value: Value;
 }

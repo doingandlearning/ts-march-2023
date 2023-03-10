@@ -43,9 +43,10 @@
   type ErrorType<T extends { error: ApplicationError | Error }> =
     T["error"] extends ApplicationError ? ApplicationError : Error;
 
-  type error = ErrorType<{ error: ServerError }>;
+  type error = ErrorType<{ error: RangeError }>;
 }
+
 {
   type NonNullable<T> = T extends null | undefined ? never : T;
-  type Here = NonNullable<string | boolean | null | undefined>;
+  type Here = NonNullable<string | number | null | undefined>;
 }
