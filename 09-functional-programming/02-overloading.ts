@@ -36,4 +36,9 @@ function overload(
   }
 }
 
-console.log(overload());
+// console.log(overload());
+
+// Example from the DOM
+
+document.createElement();
+document.createEvent();
