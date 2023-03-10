@@ -4,5 +4,5 @@ import { useAudioContext } from "../AudioContextProvider"
 
 export const Main = () => {
   const AudioContext = useAudioContext()
-  return !!AudioContext ? <Playground /> : <NoAudioMessage />
+  return Boolean(AudioContext) ? <Playground /> : <NoAudioMessage />
 }
