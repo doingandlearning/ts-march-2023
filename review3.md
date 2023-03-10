@@ -22,3 +22,8 @@ Optional
 - You could write a generator to yield the next (sequential) item from the server
 - Your types/interfaces could be in separate modules
 - Each category item returns a list of film URLs - fetch those too
+
+Bootstrap React app
+---
+	npx create-react-app my-app --template typescript
+	npm create vite@latest
