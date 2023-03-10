@@ -27,7 +27,7 @@
   type GreetArgument = FirstArgument<typeof greet>;
 }
 
-{
+namespace InferPractice {
   type PropertyType<T, K extends keyof T> = T[K] extends infer U ? U : never;
 
   interface Person {
@@ -35,7 +35,9 @@
     age: number;
   }
 
-  const person: Person = { name: "Azlee", age: 2 };
+  export const person: Person = { name: "Azlee", age: 2 };
 
   type PersonName = PropertyType<Person, "name">;
 }
+
+InferPractice.person;
